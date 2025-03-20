@@ -43,5 +43,6 @@ public class Main {
         }
 
         // note: solid thread class take care of everything about start a new thread while we need to take care of starting procedured in interface.
+        // note: one advantage of using interface instead of extending Thread class is implementation support multiple inheritance,
     }
 }
