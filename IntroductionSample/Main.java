@@ -2,8 +2,8 @@ package IntroductionSample;
 
 public class Main {
     public static void main(String[] args) {
-        Multithreading multithreading = new Multithreading();
-        Multithreading multithreading2 = new Multithreading();
+        Multithreading multithreading = new Multithreading(-1);
+        Multithreading multithreading2 = new Multithreading(-2);
 
         // since we have implemented the run method by overriding it,
         // we might think we need to start a thread using multithreading.run()
@@ -23,8 +23,11 @@ public class Main {
         // we can create multiple thread using for loop like below
         // operation: all threads will count from 0 to 4 simultaneously in different threads.
         for (int i = 0; i <=3; i++) {
-            Multithreading multithreading3 = new Multithreading();
+            Multithreading multithreading3 = new Multithreading(i);
             multithreading3.start();
         }
+
+        // thread exception: if any thread throws exception, other threads won't get affected.
+        // even if we run into main thread or main method, still the threads we started will run independantly of it.
     }
 }
