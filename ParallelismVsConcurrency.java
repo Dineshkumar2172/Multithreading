@@ -10,7 +10,6 @@ public class ParallelismVsConcurrency {
      *      2. Parallelism is when multiple tasks run simultaneously on multiple processors/cores.
      *         example: A multi-threaded program performing matrix multiplication on different CPU cores.
      * 
-     *      3. Concurrency enables parallelism, but they are not the same.
      */
 
     public void concurrencyExample() {
