@@ -19,5 +19,12 @@ public class Main {
         // multithreading and multithreading2 will get executed in main thread one after another.
         multithreading.run();
         multithreading2.run();
+
+        // we can create multiple thread using for loop like below
+        // operation: all threads will count from 0 to 4 simultaneously in different threads.
+        for (int i = 0; i <=3; i++) {
+            Multithreading multithreading3 = new Multithreading();
+            multithreading3.start();
+        }
     }
 }
