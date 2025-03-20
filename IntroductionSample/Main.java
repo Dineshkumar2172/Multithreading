@@ -36,6 +36,8 @@ public class Main {
         Thread myThread = new Thread(multithreadingInterface);
         myThread.start();
 
+        // myThread.isAlive() is used to tell if a thread is still alive or not.
+
         for (int i = 0; i < 5; i++) {
             MultithreadingInterface multithreadingInterface2 = new MultithreadingInterface(i);
             Thread myThread2 = new Thread(multithreadingInterface2);
