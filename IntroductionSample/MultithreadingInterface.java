@@ -7,9 +7,10 @@ public class MultithreadingInterface implements Runnable{
         this.threadId = threadId;
     }
 
+    @Override
     public void run() {
         for (int i = 0; i < 5; i++) {
-            System.out.println(i + "from thread " + threadId + ": using runnable interface");
+            System.out.println(i + " from thread " + threadId + ": using runnable interface");
 
             try {
                 Thread.sleep(1000);

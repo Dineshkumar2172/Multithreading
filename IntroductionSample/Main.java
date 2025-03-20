@@ -30,6 +30,19 @@ public class Main {
         // thread exception: if any thread throws exception, other threads won't get affected.
         // even if we run into main thread or main method, still the threads we started will run independantly of it.
         
-        // Runnable interface: we can also implement runnable interface to implement multi-threading.
+        // Runnable interface: we can also use runnable interface to implement multi-threading.
+        // only difference when using runnable interface in main multithread class is using "implements Runnable" instead of "extends Thread"
+        MultithreadingInterface multithreadingInterface = new MultithreadingInterface(1);
+        // but while using multithreading through runnable interface, we need to use different method to start the thread.
+        Thread myThread = new Thread(multithreadingInterface);
+        myThread.start();
+
+        for (int i = 0; i < 5; i++) {
+            MultithreadingInterface multithreadingInterface2 = new MultithreadingInterface(i);
+            Thread myThread2 = new Thread(multithreadingInterface2);
+            myThread2.start();
+        }
+
+        // note: solid thread class take care of everything about start a new thread while we need to take care of starting procedured in interface.
     }
 }
