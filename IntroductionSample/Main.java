@@ -10,7 +10,6 @@ public class Main {
         // but it would just simply execute that run method, but not in a separate thread.
         // in order to run it in a separate thread, we need to use start() which executes and
         // run the run() method in a separate thread.
-
         multithreading.start();
         multithreading2.start();
 
