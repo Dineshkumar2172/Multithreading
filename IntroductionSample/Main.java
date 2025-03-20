@@ -13,5 +13,11 @@ public class Main {
 
         multithreading.start();
         multithreading2.start();
+
+        // if we do multithreading.run() instead.
+        // it won't create a separate thread, but execute run method as part of main thread.
+        // multithreading and multithreading2 will get executed in main thread one after another.
+        multithreading.run();
+        multithreading2.run();
     }
 }
