@@ -43,12 +43,14 @@ public class Main {
             MultithreadingInterface multithreadingInterface2 = new MultithreadingInterface(i);
             Thread myThread2 = new Thread(multithreadingInterface2);
             myThread2.start();
+            // myThread2.join() // this will make main thread or other threads in queue to wait till myThread2 gets done executing.
         }
 
         // note: solid thread class take care of everything about start a new thread while we need to take care of starting procedured in interface.
         // note: one advantage of using interface instead of extending Thread class is implementation support multiple inheritance,
 
         // this print method will appear before the prints methods from inside threads though this print is present at last.
+        // in order to make everything get printed in order of execution - we can use thread.join() - it allows main thread and other threads in queue to wait till the current thread done executing.
         System.out.println("Done executing the threads!"); // high priority threads - since it's on main thread.
     }
 }
