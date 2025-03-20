@@ -37,6 +37,7 @@ public class Main {
         myThread.start();
 
         // myThread.isAlive() is used to tell if a thread is still alive or not.
+        // myThread.join() 
 
         for (int i = 0; i < 5; i++) {
             MultithreadingInterface multithreadingInterface2 = new MultithreadingInterface(i);
@@ -46,5 +47,8 @@ public class Main {
 
         // note: solid thread class take care of everything about start a new thread while we need to take care of starting procedured in interface.
         // note: one advantage of using interface instead of extending Thread class is implementation support multiple inheritance,
+
+        // this print method will appear before the prints methods from inside threads though this print is present at last.
+        System.out.println("Done executing the threads!"); // high priority threads - since it's on main thread.
     }
 }
