@@ -1,6 +1,6 @@
 import java.util.stream.IntStream;
 
-public class Introduction {
+public class ParallelismVsConcurrency {
     /*
      *  Concurrency Vs Parallelism
      *      
