@@ -29,5 +29,7 @@ public class Main {
 
         // thread exception: if any thread throws exception, other threads won't get affected.
         // even if we run into main thread or main method, still the threads we started will run independantly of it.
+        
+        // Runnable interface: we can also implement runnable interface to implement multi-threading.
     }
 }
